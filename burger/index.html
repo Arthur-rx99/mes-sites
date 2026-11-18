@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/burger-classique.svg" />
+    <title>Chez Bun – Burgers maison</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <header class="navbar">
+    <nav class="placement_navbar">
+      <div class="logo">
+        <div class="nom_logo">Chez<span> Bun</span></div>
+      </div>
+      <ul class="nav">
+        <li><a href="#burgers">Nos burgers</a></li>
+        <li><a href="#resto">Le resto</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>
+          Les meilleurs burgers <br />
+          maison du quartier
+        </h1>
+
+        <p>
+          Pain du boulanger, viande hachée chaque matin, frites coupées à la
+          main. <br />Sur place ou à emporter, tous les jours de la semaine.
+        </p>
+
+        <a href="#contact" class="button">Réserver une table</a>
+      </div>
+
+      <img src="img/hero-burger.svg" alt="Burger" class="hero-image" />
+    </div>
+  </section>
+
+  <!-- nos burgers -->
+  <h2 class="h2-burger" id="burgers">Nos burgers</h2>
+  <section class="nosburgers">
+    <div class="burger-card burger-classique">
+      <img src="img/burger-classique.svg" alt="Burger classique" />
+      <p class="typeburger">Le Classique</p>
+      <p class="genre">Bœuf</p>
+      <p class="description">
+        Steak haché, cheddar, salade, <br />
+        tomate et oignon rouge.
+      </p>
+      <p class="prix">11,90 €</p>
+    </div>
+
+    <div class="burger-card burger-poulet">
+      <img src="img/burger-poulet.svg" alt="Burger poulet" />
+      <p class="typeburger">Le Croustillant</p>
+      <p class="genre">Poulet</p>
+      <p class="description">
+        Poulet pané maison, sauce blanche <br />
+        et salade croquante.
+      </p>
+      <p class="prix">10,90 €</p>
+    </div>
+
+    <div class="burger-card burger-veggie">
+      <img src="img/burger-veggie.svg" alt="Burger veggie" />
+      <p class="typeburger">Le Veggie</p>
+      <p class="genre">Végé</p>
+      <p class="description">
+        Galette de légumes, avocat, tomate <br />
+        et pain complet.
+      </p>
+      <p class="prix">10,50 €</p>
+    </div>
+  </section>
+
+  <!-- le resto en bref -->
+  <section class="leresto" id="resto">
+    <div class="lerestobackground">
+      <img src="img/frites.svg" alt="Frites" />
+      <h3>Le resto en bref</h3>
+      <ul>
+        <li>Ouvert du lundi au samedi, de 11h30 à 22h</li>
+        <li>12 rue des Lilas, à 2 minutes du campus</li>
+        <li>Sur place, à emporter ou en livraison</li>
+        <li>Menu étudiant à 9,90 € sur présentation de la carte</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section id="contact" class="contact">
+    <h2 id="ctnt">Contact</h2>
+    <form class="contact-form">
+      <label for="nom" class="txt">Nom</label><br />
+      <input type="text" id="nom" name="nom" class="inp" placeholder="Write your name here..." required /><br />
+      <label for="email" class="txt">E-mail</label><br />
+      <input type="email" id="email" name="email" class="inp" placeholder="Write your E-mail here..." required /><br />
+      <label for="message" class="txt">Message</label><br />
+      <textarea id="message" class="msg" name="message" placeholder="Write your message here..."
+        required></textarea><br />
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <h4>Chez Bun · Burgers maison</h4>
+    <p>Restaurant fictif · Projet étudiant BTS SIO</p>
+  </footer>
+</body>
+
+</html>
