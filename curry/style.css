@@ -1,0 +1,377 @@
+body {
+  font-family: Impact, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #020c24;
+  overflow-x: hidden;
+}
+
+#fond {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 0%, #0d3478, #041b4a 50%, #020c24);
+}
+
+.halo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+header,
+main {
+  position: relative;
+  z-index: 2;
+}
+
+header {
+  text-align: left;
+  color: white;
+  min-height: 100vh;
+  padding: 40px 100px 18vh;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(black 82%, transparent);
+  mask-image: linear-gradient(black 82%, transparent);
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #041b4a;
+  background-image: linear-gradient(rgba(0, 10, 30, 0.6), rgba(0, 10, 30, 0.6)), url('images/background_steph.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+header .logo {
+  width: 100px;
+  border-radius: 8px;
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: #4b86d3;
+  padding: 10px 20px;
+  text-align: center;
+  font-family: Impact, Arial, sans-serif;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: 0.4s;
+}
+
+nav.scrolle {
+  background-color: rgba(4, 27, 74, 0.8);
+  border-color: #4b86d3;
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.header-contenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1300px;
+  min-height: calc(100vh - 40px - 18vh);
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.surtitre {
+  font-size: 15px;
+  color: white;
+  margin-bottom: 0px;
+  letter-spacing: 3px;
+}
+
+header h1 {
+  font-size: 9rem;
+  font-family: impact, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 0.9;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.prenom {
+  color: #4b86d3;
+}
+
+header p {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
+}
+
+.info {
+  font-size: 15px;
+  color: white;
+  margin-top: 30px;
+  letter-spacing: -1px;
+  line-height: 1.5;
+}
+
+.profil {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 100px;
+  border: 5px solid rgba(75, 134, 211, 0.5);
+}
+
+.defiler {
+  position: absolute;
+  left: 50%;
+  bottom: 16vh;
+  transform: translateX(-50%);
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.defiler span {
+  display: block;
+  width: 22px;
+  height: 36px;
+  margin: 0 auto 8px;
+  border: 2px solid white;
+  border-radius: 12px;
+}
+
+main {
+  padding: 15px 100px;
+  margin: 20px auto;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 70px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: #4b86d3;
+  text-align: center;
+  line-height: 1;
+}
+
+.prenom-h2 {
+  color: white;
+  font-size: 113px;
+}
+
+.enfance-de {
+  color: #4b86d3;
+  letter-spacing: 1.2px;
+  word-spacing: 5px;
+}
+
+/*Sections suivantes*/
+
+.bloc {
+  margin-top: 12rem;
+}
+
+.contenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 6rem;
+}
+
+.contenu.inverse {
+  flex-direction: row-reverse;
+}
+
+.photo-steph-dell,
+.photo-bloc {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 40px;
+  transition: 0.4s;
+}
+
+.photo-steph-dell:hover,
+.photo-bloc:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 0 4px #4b86d3;
+}
+
+.paragraphe1,
+.texte {
+  text-align: center;
+  font-family: Impact, Arial, sans-serif;
+  color: white;
+  font-size: 18px;
+  width: 30rem;
+  max-width: 100%;
+  line-height: 1.5;
+  margin: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: rgba(4, 27, 74, 0.5);
+  border: 1px solid rgba(75, 134, 211, 0.4);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+}
+
+/* Palmarès */
+
+.palmares-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 6rem;
+}
+
+.carte {
+  background-color: rgba(75, 134, 211, 0.12);
+  border: 2px solid #4b86d3;
+  border-radius: 30px;
+  padding: 30px 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s;
+}
+
+.chiffre-carte {
+  display: block;
+  font-family: Impact, Arial, sans-serif;
+  font-size: 90px;
+  line-height: 1;
+  background: linear-gradient(to bottom, #4b86d3, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.label-carte {
+  display: block;
+  margin-top: 15px;
+  font-family: Impact, Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Animation d'apparition */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s, transform 0.9s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Tablette et téléphone */
+
+@media (max-width: 1000px) {
+  header {
+    padding: 40px 30px 18vh;
+  }
+
+  header h1 {
+    font-size: 6rem;
+  }
+
+  .header-contenu {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-top: 110px;
+  }
+
+  .profil {
+    width: 200px;
+  }
+
+  main {
+    padding: 15px 24px;
+  }
+
+  .contenu,
+  .contenu.inverse {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .palmares-grille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  header .logo {
+    width: 70px;
+    top: 80px;
+  }
+
+  nav {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+
+  nav a {
+    margin: 0 6px;
+  }
+
+  header h1 {
+    font-size: 4.2rem;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  .prenom-h2 {
+    font-size: 70px;
+  }
+
+  .palmares-grille {
+    grid-template-columns: 1fr;
+  }
+}
