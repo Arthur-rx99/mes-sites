@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arthur ROUX - Portfolio restauration</title>
+    <meta name="description"
+        content="Portfolio d'Arthur ROUX retraçant mon parcours en restauration et hôtellerie de luxe.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/cocktail.png">
+</head>
+
+<body id="page-top">
+
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a class="brand" href="#page-top">ARTHUR ROUX</a>
+        <ul class="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#parcours">Parcours</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="hero" id="accueil">
+        <div class="hero-content">
+            <p class="hero-sub">Arthur ROUX · Restauration &amp; Hôtellerie</p>
+            <h1>Un parcours au service de l'excellence</h1>
+            <p class="hero-text">Du café à l'Hôtel 5*, découvrez mes expériences en restauration, étape après étape.</p>
+            <a class="btn" href="#parcours">Découvrir mon parcours</a>
+        </div>
+    </header>
+
+    <!-- PARCOURS -->
+    <section class="section" id="parcours">
+        <div class="container">
+            <h2 class="section-title">Expériences</h2>
+            <h3 class="section-subtitle">Voici mon parcours depuis mes débuts en restauration.</h3>
+
+            <ul class="timeline">
+                <li class="inverted reveal">
+                    <span class="tl-dot"></span>
+                    <article class="timeline-panel">
+                        <div class="photo">
+                            <img src="img/amazonia.jpg" data-base="img/amazonia" alt="Restaurant Amazonia">
+                        </div>
+                        <div class="info">
+                            <h4 class="year">2026</h4>
+                            <h4 class="place">Restaurant Amazonia</h4>
+                            <p class="job">Chef de rang</p>
+                            <p>Brasserie touristique proche de la tour Eiffel, où j’ai contribué à l’ouverture de
+                                l’établissement et à la mise en place du service.</p>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="reveal">
+                    <span class="tl-dot"></span>
+                    <article class="timeline-panel">
+                        <div class="photo">
+                            <img src="img/fouquets.webp" data-base="img/fouquets-hotel" alt="Fouquet's Hôtel 5*">
+                        </div>
+                        <div class="info">
+                            <h4 class="year">2025</h4>
+                            <h4 class="place">Fouquet's Hôtel <span class="stars">★★★★★</span></h4>
+                            <p class="job">Barman</p>
+                            <p>Établissement prestigieux où j’ai appris l’art de la création de cocktails, dans
+                                l’exigence d’un Hôtel 5*.</p>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="inverted reveal">
+                    <span class="tl-dot"></span>
+                    <article class="timeline-panel">
+                        <div class="photo">
+                            <img src="img/officine.jpg" data-base="img/hotel-du-louvre" alt="Hôtel du Louvre 5*">
+                        </div>
+                        <div class="info">
+                            <h4 class="year">2024</h4>
+                            <h4 class="place">Hôtel du Louvre <span class="stars">★★★★★</span></h4>
+                            <p class="job">Barman</p>
+                            <p>Lieu mythique où j’ai fait mes premiers pas dans l’hôtellerie de luxe.</p>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="reveal">
+                    <span class="tl-dot"></span>
+                    <article class="timeline-panel">
+                        <div class="photo">
+                            <img src="img/church.jpg" data-base="img/church" alt="The Church Café">
+                        </div>
+                        <div class="info">
+                            <h4 class="year">2023</h4>
+                            <h4 class="place">The Church Café</h4>
+                            <p class="job">Barman</p>
+                            <p>Ancienne église transformée en gigantesque bar-restaurant, avec un très gros flux de
+                                clients, où j’ai appris l’anglais et à me débrouiller en autonomie.</p>
+                        </div>
+                    </article>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© Arthur ROUX | 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
