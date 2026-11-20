@@ -1,58 +1,308 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mes créations web</title>
-  <base target="_blank">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f3ef;
-      color: #222;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .site {
-      background: white;
-      max-width: 400px;
-      margin: 30px auto;
-      padding: 30px;
-      border-radius: 16px;
-    }
-    a {
-      display: inline-block;
-      background: #222;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arthur Roux - Portfolio</title>
+  <meta name="description" content="Portfolio d'Arthur Roux, étudiant en BTS SIO, futur pentester, passionné de cybersécurité et de développement web.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio/style.css">
 </head>
-  
 <body>
-  
-  <h1>Mes créations web</h1>
-  <p>Découvrez mes projets et réalisations.</p>
-  <div class="site">
-  <h2>Chez Bun 🍔</h2>
-  <p>Site vitrine – Burgers maison</p>
-  <a href="./burger/">Découvrir le site</a>
-</div>
 
-  <div class="site">
-    <h2>Mon portfolio restauration</h2>
-    <p>Retrouver mes expériences en hôtellerie restauration.</p>
-    <a href="./portfolio_restauration/">Visiter le site</a>
-  </div>
-  
-  <div class="site">
-    <h2>Biographie de Stephen Curry</h2>
-    <p>Ce site biographique est né de ma passion pour le basket, un sport que j'ai appris à aimer grâce au jeu et au parcours inspirant de Stephen Curry.</p>
-    <a href="./curry/">Visiter le site</a>
-  </div>
-  
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" id="nav">
+    <a href="#accueil" class="logo"><span>&lt;</span>AR<span>/&gt;</span></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu">
+      <a href="#apropos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="accueil">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1>Arthur Roux</h1>
+      <p class="hero-sub">Étudiant en BTS SIO <span class="sep"></span> Futur pentester</p>
+      <p class="hero-text">À la recherche d'une <strong>alternance de 2 ans</strong> (rythme une semaine sur deux).</p>
+      <div class="hero-btns">
+        <a href="#apropos" class="btn">Faisons connaissance</a>
+        <a href="portfolio/cv-arthur-roux.pdf" class="btn btn-outline" target="_blank">Voir mon CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== A PROPOS ===== -->
+  <section class="section" id="apropos">
+    <div class="container about">
+      <div class="avatar">
+        <img src="portfolio/img/photo.jpg" alt="Photo d'Arthur Roux" onerror="this.remove()">
+        <span>AR</span>
+      </div>
+      <div class="reveal">
+        <h2 class="title">Faisons connaissance <span>:)</span></h2>
+        <p>Je m'appelle Arthur, j'ai <strong>23 ans</strong> et je suis étudiant en <strong>BTS SIO</strong> (Services Informatiques aux Organisations) à MyDigitalSchool Paris.</p>
+        <p>Mon objectif : me spécialiser en <strong>cybersécurité</strong> et devenir <strong>pentester</strong>. En parallèle, je m'amuse à développer des sites web et des applications, ce qui m'aide à comprendre comment les choses fonctionnent… et comment elles peuvent casser.</p>
+        <p>Avant l'informatique, j'ai travaillé plusieurs années dans l'hôtellerie de luxe (Fouquet's, Hôtel du Louvre, Dublin). Je connais donc le monde du travail, je sais comment fonctionne une entreprise et ce que l'on attend d'un collaborateur. Ces expériences, en France comme à l'étranger, m'ont également permis d'acquérir un <strong>très bon niveau d'anglais (C1)</strong>.</p>
+        <ul class="infos">
+          <li><span>Localisation</span>Courbevoie (92)</li>
+          <li><span>Langues</span>Français, Anglais C1, Espagnol B1</li>
+          <li><span>Statut</span>Recherche d'alternance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ATOUTS ===== -->
+  <section class="section section-alt" id="competences">
+    <div class="container">
+      <h2 class="title center reveal">À votre service !</h2>
+      <p class="subtitle reveal">Ce que j'apporte à une équipe.</p>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>Cybersécurité</h3>
+          <p>Lab de pentest sous VirtualBox, Kali Linux, Nmap, Metasploit et rédaction de rapports.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3v2M12 19v2M5 12H3M21 12h-2"/><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M10 10h4v4h-4z"/></svg>
+          </div>
+          <h3>Automatisation avec l'IA</h3>
+          <p>Utilisation de l'intelligence artificielle pour automatiser des tâches répétitives et gagner en efficacité.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg>
+          </div>
+          <h3>Développement</h3>
+          <p>Création de sites web et d'applications en HTML, CSS, JavaScript et Python.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+          </div>
+          <h3>Systèmes &amp; réseaux</h3>
+          <p>Terminal Linux, virtualisation et bases d'administration des systèmes et réseaux.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.8 6 5.5"/></svg>
+          </div>
+          <h3>Savoir-être</h3>
+          <p>Travail d'équipe, créativité, autonomie et organisation, forgés dans l'hôtellerie 5 étoiles.</p>
+        </article>
+      </div>
+
+      <div class="skills">
+        <div class="window reveal">
+          <div class="window-bar"><i></i><i></i><i></i><span>programmation</span></div>
+          <ul class="window-list">
+            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Python</li><li>Git / GitHub</li>
+          </ul>
+        </div>
+        <div class="window reveal">
+          <div class="window-bar"><i></i><i></i><i></i><span>sécurité &amp; réseau</span></div>
+          <ul class="window-list">
+            <li>Kali Linux</li><li>Nmap</li><li>Metasploit</li><li>VirtualBox</li><li>Terminal Linux</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJETS ===== -->
+  <section class="section" id="projets">
+    <div class="container">
+      <h2 class="title center reveal">Projets</h2>
+      <p class="subtitle reveal">Une sélection de ce que j'ai construit.</p>
+
+      <div class="filters reveal">
+        <button class="filter active" data-filter="all">Tous</button>
+        <button class="filter" data-filter="cyber">Cybersécurité</button>
+        <button class="filter" data-filter="web">Web</button>
+      </div>
+
+      <div class="projects">
+        <article class="project reveal" data-cat="cyber">
+          <div class="project-visual cyber-visual">
+            <pre>$ nmap -sV 192.168.56.101
+PORT   STATE SERVICE
+21/tcp open  ftp
+22/tcp open  ssh
+80/tcp open  http</pre>
+          </div>
+          <div class="project-body">
+            <span class="date">Mars 2026</span>
+            <h3>Lab de cybersécurité</h3>
+            <p>Déploiement de 2 VMs (Kali Linux / Metasploitable 2) sous VirtualBox, tests d'intrusion et rédaction d'un rapport de pentest professionnel.</p>
+            <div class="tags small"><span>Kali</span><span>Nmap</span><span>Metasploit</span></div>
+            <a href="https://github.com/Arthur-rx99/Lab-cybers-curit-" target="_blank" class="link">Voir sur GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="web">
+          <div class="project-visual"><img src="portfolio_restauration/img/fouquets.webp" alt="Aperçu du portfolio restauration" loading="lazy"></div>
+          <div class="project-body">
+            <span class="date">Mai 2026</span>
+            <h3>Portfolio restauration</h3>
+            <p>Site retraçant mon parcours dans l'hôtellerie et la restauration de luxe.</p>
+            <div class="tags small"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="links"><a href="portfolio_restauration/" target="_blank" class="link">Voir le site →</a><a href="https://github.com/Arthur-rx99/mes-sites/tree/main/portfolio_restauration" target="_blank" class="link link-code">Voir le code</a></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="web">
+          <div class="project-visual"><img src="curry/images/background_steph.png" alt="Aperçu du site Stephen Curry" loading="lazy"></div>
+          <div class="project-body">
+            <span class="date">2026</span>
+            <h3>Site Stephen Curry · Biographie</h3>
+            <p>Site hommage à la star NBA : biographie, records et carrière, avec animations en JavaScript.</p>
+            <div class="tags small"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="links"><a href="curry/" target="_blank" class="link">Voir le site →</a><a href="https://github.com/Arthur-rx99/mes-sites/tree/main/curry" target="_blank" class="link link-code">Voir le code</a></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="web">
+          <div class="project-visual"><img src="burger/img/hero-burger.svg" alt="Aperçu du site Chez Bun" loading="lazy"></div>
+          <div class="project-body">
+            <span class="date">2026</span>
+            <h3>Chez Bun</h3>
+            <p>Landing page responsive pour un restaurant de burgers fictif, réalisée à partir de maquettes desktop et mobile.</p>
+            <div class="tags small"><span>HTML</span><span>CSS</span><span>Responsive</span></div>
+            <div class="links"><a href="burger/" target="_blank" class="link">Voir le site →</a><a href="https://github.com/Arthur-rx99/mes-sites/tree/main/burger" target="_blank" class="link link-code">Voir le code</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARCOURS ===== -->
+  <section class="section section-alt" id="parcours">
+    <div class="container">
+      <h2 class="title center reveal">Parcours</h2>
+      <p class="subtitle reveal">De l'hôtellerie de luxe à la cybersécurité.</p>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <span class="tl-date">En cours</span>
+          <div class="tl-card highlight">
+            <h3>BTS Services Informatiques aux Organisations</h3>
+            <p class="tl-place">MyDigitalSchool Paris</p>
+            <p>Programmation, bases de données, administration des systèmes et réseaux. Objectif : poursuivre vers la cybersécurité et le pentest.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-date">2025 - 2026</span>
+          <div class="tl-card">
+            <h3>Chef de rang · Restaurant Amazonia</h3>
+            <p class="tl-place">Paris</p>
+            <p>Lancement de l'établissement et mise en place de procédures, gestion des incidents en temps réel, autonomie sur ~50 couverts.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-date">2025</span>
+          <div class="tl-card">
+            <h3>Barman · Fouquet's ★★★★★</h3>
+            <p class="tl-place">Paris</p>
+            <p>Encaissements et clôtures de caisse, respect de procédures strictes, avec une logique de reproductibilité et de traçabilité.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-date">2024 - 2025</span>
+          <div class="tl-card">
+            <h3>Barman &amp; Chef de rang · Hôtel du Louvre ★★★★★</h3>
+            <p class="tl-place">Paris</p>
+            <p>Supervision de l'inventaire et des stocks, formation et encadrement du personnel junior.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-date">2023 - 2024</span>
+          <div class="tl-card">
+            <h3>Barman · The Church Café</h3>
+            <p class="tl-place">Dublin, Irlande</p>
+            <p>Ouverture et fermeture du point de vente, communication quotidienne en anglais dans une équipe internationale.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-date">2021 - 2022</span>
+          <div class="tl-card">
+            <h3>Mention complémentaire Barman</h3>
+            <p class="tl-place">Lycée Hôtelier de La Rochelle</p>
+            <p>Médaille de bronze au concours Meilleur Apprenti de France.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-date">2018 - 2021</span>
+          <div class="tl-card">
+            <h3>Bac Pro Commercialisation et services en restauration</h3>
+            <p class="tl-place">Lycée Hôtelier de La Rochelle</p>
+            <p>Section européenne.</p>
+          </div>
+        </div>
+        <div class="tl-start reveal">
+          <span class="tl-start-icon"><svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></span>
+          Début du parcours <em>2018</em>
+        </div>
+      </div>
+
+      <div class="cv-banner reveal">
+        <p>Consultez mon curriculum vitae</p>
+        <a href="portfolio/cv-arthur-roux.pdf" target="_blank" class="btn">Télécharger mon CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HORS ECRAN ===== -->
+  <section class="section" id="loisirs">
+    <div class="container">
+      <h2 class="title center reveal">En dehors de l'écran</h2>
+      <div class="hobbies reveal">
+        <div><strong>🏀</strong>Basket-ball<span>12 ans de pratique</span></div>
+        <div><strong>🏃</strong>Running<span>Spécialisé en course de 10 km</span></div>
+        <div><strong>🏋️</strong>Musculation</div>
+        <div><strong>🎮</strong>Jeux vidéo<span>FPS</span></div>
+        <div><strong>🔐</strong>Pentesting<span>CTF et labs</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section-alt" id="contact">
+    <div class="container contact">
+      <div class="reveal">
+        <h2 class="title">Contact</h2>
+        <p>Une alternance, un projet ou simplement une question ? N'hésitez pas à me contacter.</p>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:arthurroux99@gmail.com">arthurroux99@gmail.com</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/arthurroux" target="_blank">linkedin.com/in/arthurroux</a></li>
+          <li><span>GitHub</span><a href="https://github.com/Arthur-rx99" target="_blank">github.com/Arthur-rx99</a></li>
+          <li><span>Ville</span>Courbevoie (92)</li>
+        </ul>
+      </div>
+      <form class="form reveal" id="form">
+        <label>Nom et prénom *<input type="text" name="nom" required></label>
+        <label>Email *<input type="email" name="email" required></label>
+        <label>Message *<textarea name="message" rows="5" required></textarea></label>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© Arthur Roux | <span id="year"></span></p>
+  </footer>
+
+  <script src="portfolio/script.js"></script>
 </body>
 </html>
