@@ -1,2 +1,4 @@
 # mes-sites
-Voici la création de mes différents sites internet
+Mes projets web : [Chez Bun](burger/), [Portfolio restauration](portfolio_restauration/) et [Stephen Curry](curry/).
+
+Mon portfolio : https://arthur-rx99.github.io/
