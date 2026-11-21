@@ -225,6 +225,19 @@ ul { list-style: none; }
   color: var(--title);
 }
 .stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; white-space: nowrap; }
+
+/* Liens vers les sites des établissements */
+a.photo { display: block; cursor: pointer; }
+.place a { transition: color .3s; }
+.place a:hover { color: var(--gold); }
+.ext {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--gold);
+  opacity: .6;
+  transition: opacity .3s, transform .3s;
+}
+.place a:hover .ext { opacity: 1; transform: translate(2px, -2px); }
 .job {
   text-transform: uppercase;
   letter-spacing: 2px;
